@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "7f8e8f2c-1027-4873-ae31-281ef9118172",
+		"name": "Authorization Methods",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get API Key -Current weather by City Name",
+			"_postman_id": "24a2d763-0c40-4a7c-9f68-88c2f17eae80",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"in": "query",
+						"value": "00a3d100d7e96d6d504378aaf4c4dc4d",
+						"key": "appid"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/weather?q=Tampa",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Tampa"
+						},
+						{
+							"key": "appid",
+							"value": "00a3d100d7e96d6d504378aaf4c4dc4d",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Basic Auth",
+			"_postman_id": "80048266-4505-4442-a1b6-2d0f68e361c8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "password",
+						"username": "postman"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://postman-echo.com/basic-auth"
+			},
+			"response": []
+		},
+		{
+			"name": "Bearer Token",
+			"_postman_id": "04514f3b-8aea-4245-8f6f-48ff66c61e2c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsInVzZXJuYW1lIjoia21pbmNoZWxsZSIsImVtYWlsIjoia21pbmNoZWxsZUBxcS5jb20iLCJmaXJzdE5hbWUiOiJKZWFubmUiLCJsYXN0TmFtZSI6IkhhbHZvcnNvbiIsImdlbmRlciI6ImZlbWFsZSIsImltYWdlIjoiaHR0cHM6Ly9yb2JvaGFzaC5vcmcvYXV0cXVpYXV0LnBuZz9zaXplPTUweDUwJnNldD1zZXQxIiwiaWF0IjoxNjM1NzczOTYyLCJleHAiOjE2MzU3Nzc1NjJ9.n9PQX8w8ocKo0dMCw3g8bKhjB8Wo7f7IONFBDqfxKhs"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{BaseUrl}}auth/RESOURCE"
+			},
+			"response": []
+		},
+		{
+			"name": "Digest Auth",
+			"_postman_id": "8d7a77c6-245e-4644-b86b-f74ce51e5453",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "digest",
+					"digest": {
+						"disableRetryRequest": false,
+						"password": "password",
+						"username": "postman",
+						"algorithm": "MD5"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://postman-echo.com/digest-auth"
+			},
+			"response": []
+		}
+	]
+}
