@@ -24,7 +24,7 @@
 							}
 						}
 					],
-					"_postman_id": "e27f9313-72cc-496d-a478-09be9de58995",
+					"id": "e27f9313-72cc-496d-a478-09be9de58995",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -61,7 +61,7 @@
 							}
 						}
 					],
-					"_postman_id": "89be2a1e-410d-4ea8-aa09-321aa74cc6b0",
+					"id": "89be2a1e-410d-4ea8-aa09-321aa74cc6b0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -73,11 +73,16 @@
 					"response": []
 				}
 			],
-			"_postman_id": "53af7c07-cc96-464d-89be-f4bf0e82bd71"
+			"id": "53af7c07-cc96-464d-89be-f4bf0e82bd71"
+		},
+		{
+			"name": "New Folder",
+			"item": [],
+			"id": "9108c59a-3403-4d10-8c93-fd5d8e73625b"
 		},
 		{
 			"name": "Get all students",
-			"_postman_id": "7d13ae1a-6248-46e9-bb2a-457f5802812d",
+			"id": "7d13ae1a-6248-46e9-bb2a-457f5802812d",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -90,7 +95,7 @@
 		},
 		{
 			"name": "Create a Student Resource",
-			"_postman_id": "95de4f2a-8afc-4868-ae6b-27848730811d",
+			"id": "95de4f2a-8afc-4868-ae6b-27848730811d",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -115,7 +120,7 @@
 		},
 		{
 			"name": "Delete students with Student id",
-			"_postman_id": "22b30a63-a25a-4fb5-a186-2829d67260b1",
+			"id": "22b30a63-a25a-4fb5-a186-2829d67260b1",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -128,7 +133,7 @@
 		},
 		{
 			"name": "Create Resource from External Json",
-			"_postman_id": "e1592706-f11f-4462-a185-206a654bae97",
+			"id": "e1592706-f11f-4462-a185-206a654bae97",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -175,7 +180,7 @@
 					}
 				}
 			],
-			"_postman_id": "d81e9a7e-b64e-4746-ae77-1cb107957aa6",
+			"id": "d81e9a7e-b64e-4746-ae77-1cb107957aa6",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -220,7 +225,7 @@
 	],
 	"variable": [
 		{
-			"id": "f4905394-4e5f-47aa-85d5-ae79430f36af",
+			"id": "1092c7f9-70d9-4c42-819d-25d0f3250c22",
 			"key": "Collection_Base_URL",
 			"value": "http://localhost:3000/",
 			"type": "string"
