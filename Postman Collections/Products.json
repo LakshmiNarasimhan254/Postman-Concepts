@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "46d783a5-f2c8-4dfc-a776-50b4efe01bcd",
+		"name": "Products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all products",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "87a37897-d68d-4f48-9d1a-f2310b96a15c",
+						"exec": [
+							"pm.environment.set(\"variable_key\", \"variable_value\");"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "61e562ab-2860-4c6a-8f74-7930c9dc6e48",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"   // pm.response.to.have.status(200);\r",
+							"    pm.expect(pm.response.code).eql(200)\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Asset title is MacBook Pro\",()=>{\r",
+							"  var JsonResponse =  pm.response.json()\r",
+							" console.log(JsonResponse)\r",
+							"  pm.expect(JsonResponse.products[5].title).is.equal(\"MacBook Pro\")\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "f0cb02c5-df0a-4bda-92c4-fac18120fdf0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{BaseUrl}}products"
+			},
+			"response": []
+		},
+		{
+			"name": "Get a single product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb421540-1c26-41f5-92a8-5ff6b3eb9d3f",
+						"exec": [
+							"console.log(pm.environment.get(\"BaseUrl\"));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "4587fe46-8a2d-4423-b04c-7178deafa43c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{BaseUrl}}products/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Search products",
+			"_postman_id": "ff81bf95-4cc8-4953-83c3-05b8d622e0cc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}products/search?q=phone",
+					"host": [
+						"{{BaseUrl}}products"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "phone"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Limit & Skip products",
+			"_postman_id": "539a375f-3410-40e9-b821-28b5da40722d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}products?limit=10&skip=10&select=title,price",
+					"host": [
+						"{{BaseUrl}}products"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "skip",
+							"value": "10"
+						},
+						{
+							"key": "select",
+							"value": "title,price"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all products categories",
+			"_postman_id": "dde75475-ca92-474b-8617-b1af4076078e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{BaseUrl}}products/categorie"
+			},
+			"response": []
+		},
+		{
+			"name": "Add a new product",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "2e5866b6-caff-4df3-819e-e2137cdf3e14",
+						"exec": [
+							"var Bu = pm.environment.get(\"BaseUrl\");\r",
+							"pm.sendRequest(Bu+\"products/\", function (err, response) {\r",
+							"    console.log(response.json());\r",
+							"     console.log(response.code);\r",
+							"    if (response.code!=200){\r",
+							"        console.error(\"Health Check Failed.Server is down\")\r",
+							"        throw new Error(\"Health Check Failed.Server is down\")\r",
+							"    }\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "46a3f2bf-15a6-4061-9f68-ab7329823fd1",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "12abc99d-72c2-403d-8937-d28e38f210d0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"BMW Pencils\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{BaseUrl}}products/add"
+			},
+			"response": []
+		},
+		{
+			"name": "Update a product  Up",
+			"_postman_id": "b1ecbd4f-6833-49c3-8882-9a6f8a784561",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"iPhone Galaxy +1\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{BaseUrl}}products/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a product",
+			"_postman_id": "663292b7-0a83-4da2-ab9e-7908c18bfc6e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{BaseUrl}}products/category/smartphones"
+			},
+			"response": []
+		}
+	]
+}
