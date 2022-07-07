@@ -28,7 +28,7 @@
 								"exec": [
 									"console.log(\"After Google\");\r",
 									"postman.setNextRequest(\"Get yahoo\")\r",
-									"pm.test(\"Status code is 200\", function () {\r",
+									"pm.test(\"Status code Check is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});"
 								],
