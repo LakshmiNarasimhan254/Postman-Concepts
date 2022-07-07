@@ -76,7 +76,7 @@
 			"id": "53af7c07-cc96-464d-89be-f4bf0e82bd71"
 		},
 		{
-			"name": "New Folder",
+			"name": "Data from External",
 			"item": [],
 			"id": "9108c59a-3403-4d10-8c93-fd5d8e73625b"
 		},
@@ -225,7 +225,7 @@
 	],
 	"variable": [
 		{
-			"id": "1092c7f9-70d9-4c42-819d-25d0f3250c22",
+			"id": "85137cac-f374-41f7-a9f8-5b6727617aa8",
 			"key": "Collection_Base_URL",
 			"value": "http://localhost:3000/",
 			"type": "string"
