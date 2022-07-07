@@ -76,8 +76,78 @@
 			"id": "53af7c07-cc96-464d-89be-f4bf0e82bd71"
 		},
 		{
-			"name": "Data from External",
-			"item": [],
+			"name": "Data_from_External",
+			"item": [
+				{
+					"name": "Create Resource from External Json",
+					"id": "e1592706-f11f-4462-a185-206a654bae97",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"First_Name\": \"{{First_Name}}\",\r\n    \"Last_Name\": \"{{Last_Name}}\",\r\n    \"Age\": {{Age}},\r\n    \"id\" : {{id}},\r\n    \"SubjectId\": {{SubjectId}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{Collection_Base_URL}}Students"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Resource from External CSVCopy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "58eb5e73-994a-4366-b7ef-8dca8f375b2c",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"    console.log(pm.response.code);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(data.First_Name);\r",
+									"    console.log(data[\"First_Name\"]);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(pm.iterationData.get(\"Age\"));\r",
+									"    console.log(pm.iterationData.get(\"Age\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "d81e9a7e-b64e-4746-ae77-1cb107957aa6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"First_Name\": \"{{First_Name}}\",\r\n    \"Last_Name\": \"{{Last_Name}}\",\r\n    \"Age\": {{Age}},\r\n    \"id\" : {{id}},\r\n    \"SubjectId\": {{SubjectId}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{Collection_Base_URL}}Students"
+					},
+					"response": []
+				}
+			],
 			"id": "9108c59a-3403-4d10-8c93-fd5d8e73625b"
 		},
 		{
@@ -130,75 +200,6 @@
 				"url": "{{Collection_Base_URL}}Students/1"
 			},
 			"response": []
-		},
-		{
-			"name": "Create Resource from External Json",
-			"id": "e1592706-f11f-4462-a185-206a654bae97",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"First_Name\": \"{{First_Name}}\",\r\n    \"Last_Name\": \"{{Last_Name}}\",\r\n    \"Age\": {{Age}},\r\n    \"id\" : {{id}},\r\n    \"SubjectId\": {{SubjectId}}\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": "{{Collection_Base_URL}}Students"
-			},
-			"response": []
-		},
-		{
-			"name": "Create Resource from External CSVCopy",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "58eb5e73-994a-4366-b7ef-8dca8f375b2c",
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(201);\r",
-							"    console.log(pm.response.code);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Body matches string\", function () {\r",
-							"    pm.expect(pm.response.text()).to.include(data.First_Name);\r",
-							"    console.log(data[\"First_Name\"]);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Body matches string\", function () {\r",
-							"    pm.expect(pm.response.text()).to.include(pm.iterationData.get(\"Age\"));\r",
-							"    console.log(pm.iterationData.get(\"Age\"));\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"id": "d81e9a7e-b64e-4746-ae77-1cb107957aa6",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"First_Name\": \"{{First_Name}}\",\r\n    \"Last_Name\": \"{{Last_Name}}\",\r\n    \"Age\": {{Age}},\r\n    \"id\" : {{id}},\r\n    \"SubjectId\": {{SubjectId}}\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": "{{Collection_Base_URL}}Students"
-			},
-			"response": []
 		}
 	],
 	"event": [
@@ -225,7 +226,7 @@
 	],
 	"variable": [
 		{
-			"id": "85137cac-f374-41f7-a9f8-5b6727617aa8",
+			"id": "14bc96cd-90ad-4ec4-9c07-e12e9655397f",
 			"key": "Collection_Base_URL",
 			"value": "http://localhost:3000/",
 			"type": "string"
