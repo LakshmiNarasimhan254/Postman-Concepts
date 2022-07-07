@@ -1,0 +1,98 @@
+{
+  "Students": [
+    {
+      "First_Name": "Michael",
+      "Last_Name": "Gopal",
+      "Age": 27,
+      "id": 1,
+      "SubjectId": 1
+    },
+    {
+      "First_Name": "Madan",
+      "Last_ Name": "Gopal",
+      "Age": 27,
+      "id": 2,
+      "SubjectId": 2
+    },
+    {
+      "First_Name": "Kameshwaran",
+      "Last_Name": "Gopal",
+      "Age": 27,
+      "id": 3,
+      "SubjectId": 2
+    },
+    {
+      "First_Name": "SubramaniyaRaju",
+      "Last_Name": "Gopal",
+      "Age": 27,
+      "id": 4,
+      "SubjectId": 1
+    },
+    {
+      "First_Name": "Ram",
+      "Last_Name": "CM",
+      "Age": 45,
+      "id": 5,
+      "SubjectId": 1
+    },
+    {
+      "First_Name": "Aiyappan",
+      "Last_Name": "Nair",
+      "Age": 42,
+      "id": 6,
+      "SubjectId": 2
+    },
+    {
+      "First_Name": "Ganesh",
+      "Last_Name": "Hegde",
+      "Age": 43,
+      "id": 7,
+      "SubjectId": 2
+    },
+    {
+      "First_Name": "Vedam",
+      "Last_Name": "Iyengar",
+      "Age": 44,
+      "id": 8,
+      "SubjectId": 1
+    },
+    {
+      "First_Name": "Hanumanth",
+      "Last_Name": "Reddy",
+      "Age": 44,
+      "id": 9,
+      "SubjectId": 1
+    },
+    {
+      "First Name": "Sakthivel",
+      "Last Name": "Counder",
+      "Age": 34,
+      "id": 10,
+      "SubjectId": 2
+    },
+    {
+      "First Name": "Velu",
+      "Last Name": "Nayakar",
+      "Age": 48,
+      "id": 11,
+      "SubjectId": 2
+    },
+    {
+      "First Name": "Avatar",
+      "Last Name": "Singh",
+      "Age": 50,
+      "SubjectId": 1,
+      "id": 12
+    }
+  ],
+  "Subjects": [
+    {
+      "Name": "Automation",
+      "id": 1
+    },
+    {
+      "Name": "JSON",
+      "id": 2
+    }
+  ]
+}
