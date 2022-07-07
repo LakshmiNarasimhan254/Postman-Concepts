@@ -27,13 +27,16 @@
 								"id": "630a12b9-461b-4c19-ad9e-ae7c15cce80e",
 								"exec": [
 									"console.log(\"After Google\");\r",
-									"postman.setNextRequest(\"Get yahoo\")"
+									"postman.setNextRequest(\"Get yahoo\")\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
 								],
 								"type": "text/javascript"
 							}
 						}
 					],
-					"_postman_id": "4c9cfceb-fd43-43d0-bb7a-667d799a8efa",
+					"id": "4c9cfceb-fd43-43d0-bb7a-667d799a8efa",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -69,7 +72,7 @@
 							}
 						}
 					],
-					"_postman_id": "62f7ca88-a607-42ea-a62b-56febee0d7dd",
+					"id": "62f7ca88-a607-42ea-a62b-56febee0d7dd",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -104,7 +107,7 @@
 							}
 						}
 					],
-					"_postman_id": "56884850-8d90-43ea-84a1-3dbe88f80812",
+					"id": "56884850-8d90-43ea-84a1-3dbe88f80812",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -116,7 +119,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "238c1690-17d5-4695-a3a6-0525444ddea0",
+			"id": "238c1690-17d5-4695-a3a6-0525444ddea0",
 			"event": [
 				{
 					"listen": "prerequest",
