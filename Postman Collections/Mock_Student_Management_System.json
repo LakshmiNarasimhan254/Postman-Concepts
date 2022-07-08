@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "3a6f408f-69bb-42ae-a4dd-dec43fffaa93",
+		"name": "Mock_Student_Management_System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Mock_Get_All_Students",
+			"_postman_id": "8721a446-0a9f-4e37-a3c9-4473609f36e5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{Mock_Base_URL}}/Students"
+			},
+			"response": [
+				{
+					"id": "e84efb1a-fb50-4479-afc7-a1b1e5dbf978",
+					"name": "Mock_Get_All_Students",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{Mock_Base_URL}}/Students"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 08 Jul 2022 00:47:31 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=a8d5be125949e453"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=23ff501812ecd260"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1657241311"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "[\n    {\n    \"First Name\": \"{{$randomFirstName}}\",\n    \"Last Name\": \"{{$randomLastName}}\",\n    \"Age\": {{$randomInt}},\n    \"id\" : {{$randomUUID}},\n    \"SubjectId\": {{$randomUUID}}\n},\n{\n    \"First Name\": \"{{$randomFirstName}}\",\n    \"Last Name\": \"{{$randomLastName}}\",\n    \"Age\": {{$randomInt}},\n    \"id\" : {{$randomUUID}},\n    \"SubjectId\": {{$randomUUID}}\n},{\n    \"First Name\": \"{{$randomFirstName}}\",\n    \"Last Name\": \"{{$randomLastName}}\",\n    \"Age\": {{$randomInt}},\n    \"id\" : {{$randomUUID}},\n    \"SubjectId\": {{$randomUUID}}\n},{\n    \"First Name\": \"{{$randomFirstName}}\",\n    \"Last Name\": \"{{$randomLastName}}\",\n    \"Age\": {{$randomInt}},\n    \"id\" : {{$randomUUID}},\n    \"SubjectId\": {{$randomUUID}}\n},{\n    \"First Name\": \"{{$randomFirstName}}\",\n    \"Last Name\": \"{{$randomLastName}}\",\n    \"Age\": {{$randomInt}},\n    \"id\" : {{$randomUUID}},\n    \"SubjectId\": {{$randomUUID}}\n},{\n    \"First Name\": \"{{$randomFirstName}}\",\n    \"Last Name\": \"{{$randomLastName}}\",\n    \"Age\": {{$randomInt}},\n    \"id\" : {{$randomUUID}},\n    \"SubjectId\": {{$randomUUID}}\n},{\n    \"First Name\": \"{{$randomFirstName}}\",\n    \"Last Name\": \"{{$randomLastName}}\",\n    \"Age\": {{$randomInt}},\n    \"id\" : {{$randomUUID}},\n    \"SubjectId\": {{$randomUUID}}\n},{\n    \"First Name\": \"{{$randomFirstName}}\",\n    \"Last Name\": \"{{$randomLastName}}\",\n    \"Age\": {{$randomInt}},\n    \"id\" : {{$randomUUID}},\n    \"SubjectId\": {{$randomUUID}}\n},{\n    \"First Name\": \"{{$randomFirstName}}\",\n    \"Last Name\": \"{{$randomLastName}}\",\n    \"Age\": {{$randomInt}},\n    \"id\" : {{$randomUUID}},\n    \"SubjectId\": {{$randomUUID}}\n},{\n    \"First Name\": \"{{$randomFirstName}}\",\n    \"Last Name\": \"{{$randomLastName}}\",\n    \"Age\": {{$randomInt}},\n    \"id\" : {{$randomUUID}},\n    \"SubjectId\": {{$randomUUID}}\n},{\n    \"First Name\": \"{{$randomFirstName}}\",\n    \"Last Name\": \"{{$randomLastName}}\",\n    \"Age\": {{$randomInt}},\n    \"id\" : {{$randomUUID}},\n    \"SubjectId\": {{$randomUUID}}\n},{\n    \"First Name\": \"{{$randomFirstName}}\",\n    \"Last Name\": \"{{$randomLastName}}\",\n    \"Age\": {{$randomInt}},\n    \"id\" : {{$randomUUID}},\n    \"SubjectId\": {{$randomUUID}}\n}\n]"
+				}
+			]
+		},
+		{
+			"name": "Mock_Create_Students",
+			"_postman_id": "c7c8e969-71f7-45de-b033-e461de5c99f2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "{{Mock_Base_URL}}/Students"
+			},
+			"response": [
+				{
+					"id": "773b3603-a779-450e-9619-c2c3a3b86b2c",
+					"name": "Mock_Create_Students",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"First Name\": \"{{$randomFirstName}}\",\r\n    \"Last Name\": \"{{$randomLastName}}\",\r\n    \"Age\": {{$randomInt}},\r\n    \"id\" : {{$randomUUID}},\r\n    \"SubjectId\": {{$randomUUID}}\r\n},",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{Mock_Base_URL}}/Students"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 08 Jul 2022 00:43:06 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=4e57c70f91372de8"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=09bb098beae63310"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "118"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1657241015"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a4-7hO0T/XLq3TuFViTu2ZVQQdIY+A\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"First Name\": \"{{$randomFirstName}}\",\n    \"Last Name\": \"{{$randomLastName}}\",\n    \"Age\": {{$randomInt}},\n    \"id\" : {{$randomUUID}},\n    \"SubjectId\": {{$randomUUID}}\n},"
+				}
+			]
+		}
+	]
+}
