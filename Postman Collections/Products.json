@@ -43,7 +43,7 @@
 					}
 				}
 			],
-			"_postman_id": "f0cb02c5-df0a-4bda-92c4-fac18120fdf0",
+			"id": "f0cb02c5-df0a-4bda-92c4-fac18120fdf0",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -68,7 +68,7 @@
 					}
 				}
 			],
-			"_postman_id": "4587fe46-8a2d-4423-b04c-7178deafa43c",
+			"id": "4587fe46-8a2d-4423-b04c-7178deafa43c",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -81,7 +81,7 @@
 		},
 		{
 			"name": "Search products",
-			"_postman_id": "ff81bf95-4cc8-4953-83c3-05b8d622e0cc",
+			"id": "ff81bf95-4cc8-4953-83c3-05b8d622e0cc",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -108,7 +108,7 @@
 		},
 		{
 			"name": "Limit & Skip products",
-			"_postman_id": "539a375f-3410-40e9-b821-28b5da40722d",
+			"id": "539a375f-3410-40e9-b821-28b5da40722d",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -140,7 +140,7 @@
 		},
 		{
 			"name": "Get all products categories",
-			"_postman_id": "dde75475-ca92-474b-8617-b1af4076078e",
+			"id": "dde75475-ca92-474b-8617-b1af4076078e",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -183,11 +183,14 @@
 					}
 				}
 			],
-			"_postman_id": "12abc99d-72c2-403d-8937-d28e38f210d0",
+			"id": "12abc99d-72c2-403d-8937-d28e38f210d0",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -205,7 +208,7 @@
 		},
 		{
 			"name": "Update a product  Up",
-			"_postman_id": "b1ecbd4f-6833-49c3-8882-9a6f8a784561",
+			"id": "b1ecbd4f-6833-49c3-8882-9a6f8a784561",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -227,7 +230,7 @@
 		},
 		{
 			"name": "Delete a product",
-			"_postman_id": "663292b7-0a83-4da2-ab9e-7908c18bfc6e",
+			"id": "663292b7-0a83-4da2-ab9e-7908c18bfc6e",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
