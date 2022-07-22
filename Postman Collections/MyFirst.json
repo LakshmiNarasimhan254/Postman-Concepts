@@ -136,7 +136,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"First_Name\": \"{{First_Name}}\",\r\n    \"Last_Name\": \"{{Last_Name}}\",\r\n    \"Age\": {{Age}},\r\n    \"id\" : {{id}},\r\n    \"SubjectId\": {{SubjectId}}\r\n}",
+							"raw": "{\r\n    \"first_Name\": \"{{First_Name}}\",\r\n    \"last_Name\": \"{{Last_Name}}\",\r\n    \"age\": {{Age}},\r\n    \"id\" : {{id}},\r\n    \"subjectId\": {{SubjectId}},\r\n    \"skills\": [\r\n        \"Java\",\r\n        \"Python\"\r\n      ]\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -269,7 +269,7 @@
 	],
 	"variable": [
 		{
-			"id": "9c58651f-e092-4237-b08b-fae5bdcf680e",
+			"id": "798af08e-ee41-4d98-ba29-00f4127f7aa1",
 			"key": "Collection_Base_URL",
 			"value": "http://localhost:3000/",
 			"type": "string"
