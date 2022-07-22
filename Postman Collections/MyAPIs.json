@@ -267,8 +267,18 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"skills\": [\r\n        \"Java\",\r\n        \"Python\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{Collection_Base_URL}}Students/16"
 					},
 					"response": []
 				}
@@ -300,7 +310,7 @@
 	],
 	"variable": [
 		{
-			"id": "3d53ca5f-1028-421f-842a-67d401d03e86",
+			"id": "e5f0efb8-d978-405a-9030-3e4eaa824ca8",
 			"key": "Collection_Base_URL",
 			"value": "http://localhost:3000/",
 			"type": "string"
