@@ -194,6 +194,11 @@
 			"id": "f6d8a32b-7b7d-49bd-8261-5bf3f02b276d"
 		},
 		{
+			"name": "New Folder",
+			"item": [],
+			"id": "60eb6de3-28d5-4d5d-9fa6-471ba5298e2a"
+		},
+		{
 			"name": "Get all students",
 			"id": "7d13ae1a-6248-46e9-bb2a-457f5802812d",
 			"protocolProfileBehavior": {
@@ -269,7 +274,7 @@
 	],
 	"variable": [
 		{
-			"id": "adadc64f-5d7e-42fe-b05c-78686b34a6d9",
+			"id": "fdf8b3c3-a468-4292-9a53-bb7db1bd3f83",
 			"key": "Collection_Base_URL",
 			"value": "http://localhost:3000/",
 			"type": "string"
