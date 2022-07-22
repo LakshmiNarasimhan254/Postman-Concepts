@@ -248,7 +248,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Update a Student",
 					"id": "48dc4fb3-abb7-4804-a14a-ad288a986941",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -287,7 +287,7 @@
 	],
 	"variable": [
 		{
-			"id": "0538dda5-8c54-491f-b2d9-8ab7c41f5811",
+			"id": "61601930-9bb2-4061-93b4-62b3ea82b37e",
 			"key": "Collection_Base_URL",
 			"value": "http://localhost:3000/",
 			"type": "string"
