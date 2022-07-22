@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "5bc72ec2-0d86-479e-a26e-e630bd5b7026",
+		"name": "MyAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Request_Chaining",
+			"item": [
+				{
+					"name": "Create a Student Resource",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0f78741c-c57f-4625-9dcd-a6fd546cc86c",
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"console.log(jsonData.id)\r",
+									"pm.environment.set(\"studentID\", jsonData.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "e27f9313-72cc-496d-a478-09be9de58995",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_Name\": \"Avatar\",\r\n    \"last_Name\": \"Singh\",\r\n    \"age\": 50,\r\n    \"subjectId\": 1,\r\n    \"skills\": [\r\n        \"Java\",\r\n        \"Python\"\r\n      ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{Collection_Base_URL}}Students"
+					},
+					"response": []
+				},
+				{
+					"name": "Get created Student",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "da38759f-cdbb-4511-83e1-d557c1332f4d",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "89be2a1e-410d-4ea8-aa09-321aa74cc6b0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{Collection_Base_URL}}Students/{{studentID}}"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "53af7c07-cc96-464d-89be-f4bf0e82bd71"
+		},
+		{
+			"name": "Data_from_External",
+			"item": [
+				{
+					"name": "Create Resource from External Json",
+					"_postman_id": "e1592706-f11f-4462-a185-206a654bae97",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_Name\": \"{{First_Name}}\",\r\n    \"last_Name\": \"{{Last_Name}}\",\r\n    \"age\": {{Age}},\r\n    \"id\" : {{id}},\r\n    \"subjectId\": {{SubjectId}},\r\n    \"skills\": [\r\n        \"Java\",\r\n        \"Python\"\r\n      ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{Collection_Base_URL}}Students"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Resource from External CSVCopy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "58eb5e73-994a-4366-b7ef-8dca8f375b2c",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"    console.log(pm.response.code);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(data.First_Name);\r",
+									"    console.log(data[\"First_Name\"]);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(pm.iterationData.get(\"Age\"));\r",
+									"    console.log(pm.iterationData.get(\"Age\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "d81e9a7e-b64e-4746-ae77-1cb107957aa6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_Name\": \"{{First_Name}}\",\r\n    \"last_Name\": \"{{Last_Name}}\",\r\n    \"age\": {{Age}},\r\n    \"id\" : {{id}},\r\n    \"subjectId\": {{SubjectId}},\r\n    \"skills\": [\r\n        \"Java\",\r\n        \"Python\"\r\n      ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{Collection_Base_URL}}Students"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "9108c59a-3403-4d10-8c93-fd5d8e73625b"
+		},
+		{
+			"name": "Matches",
+			"item": [
+				{
+					"name": "http://localhost:3000/Indo-Pak-Series",
+					"_postman_id": "3d98cd58-1848-49c2-9ad1-4bd673f1338d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {}
+						},
+						"url": "{{url}}Indo-Pak-Series"
+					},
+					"response": [
+						{
+							"id": "1e8e5697-b2c9-4f9c-961b-8bae587bf6a5",
+							"name": "Default",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": "{{url}}/http://localhost:3000/Indo-Pak-Series"
+							},
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"editionId\": 2022,\n  \"data\": {\n    \"homeCountry\": \"India\",\n    \"visitingCountry\": \"Pakistan\",\n    \"playerCount\": 11,\n    \"playerMinHeight\": 6.2,\n    \"id\": 1,\n    \"gameId\": 2\n  },\n  \"games\": [\n    {\n      \"date\": \"2022-07-022T13:33:03.969Z\",\n      \"venue\": \"Chennai\",\n      \"id\": 1\n    },\n    {\n      \"date\": \"2022-07-023T13:33:03.969Z\",\n      \"venue\": \"Banglore\",\n      \"id\": 2\n    },\n    {\n      \"date\": \"2022-07-024T13:33:03.969Z\",\n      \"venue\": \"Kolkatta\",\n      \"id\": 3\n    }\n  ],\n  \"teams\": [\n    {\n      \"Name\": \"India\",\n      \"id\": 1,\n      \"playerCount\": 11,\n      \"players\": [\n        {\n          \"playerName\": \"Sachin\",\n          \"id\": 1\n        },\n        {\n          \"playerName\": \"Ganguly\",\n          \"id\": 2\n        },\n        {\n          \"playerName\": \"Shewag\",\n          \"id\": 3\n        },\n        {\n          \"playerName\": \"Dravid\",\n          \"id\": 4\n        },\n        {\n          \"playerName\": \"Yuvraj\",\n          \"id\": 5\n        },\n        {\n          \"playerName\": \"Dhoni\",\n          \"id\": 6\n        },\n        {\n          \"playerName\": \"Pathan\",\n          \"id\": 7\n        },\n        {\n          \"playerName\": \"Harbhajan\",\n          \"id\": 8\n        },\n        {\n          \"playerName\": \"Kumble\",\n          \"id\": 9\n        },\n        {\n          \"playerName\": \"Zaheer\",\n          \"id\": 10\n        },\n        {\n          \"playerName\": \"Nehra\",\n          \"id\": 11\n        }\n      ]\n    },\n    {\n      \"Name\": \"Pakistan\",\n      \"id\": 2,\n      \"playerCount\": 11,\n      \"players\": [\n        {\n          \"playerName\": \"Anwar\",\n          \"id\": 1\n        },\n        {\n          \"playerName\": \"Yousuf\",\n          \"id\": 2\n        },\n        {\n          \"playerName\": \"Younis\",\n          \"id\": 3\n        },\n        {\n          \"playerName\": \"Malik\",\n          \"id\": 4\n        },\n        {\n          \"playerName\": \"Inzamam\",\n          \"id\": 5\n        },\n        {\n          \"playerName\": \"Afridi\",\n          \"id\": 6\n        },\n        {\n          \"playerName\": \"Moin\",\n          \"id\": 7\n        },\n        {\n          \"playerName\": \"Akram\",\n          \"id\": 8\n        },\n        {\n          \"playerName\": \"Akthar\",\n          \"id\": 9\n        },\n        {\n          \"playerName\": \"Saqline\",\n          \"id\": 10\n        },\n        {\n          \"playerName\": \"Waqar\",\n          \"id\": 11\n        }\n      ]\n    }\n  ]\n}"
+						}
+					]
+				}
+			],
+			"_postman_id": "f6d8a32b-7b7d-49bd-8261-5bf3f02b276d"
+		},
+		{
+			"name": "Student_Management_System",
+			"item": [
+				{
+					"name": "Get all students",
+					"_postman_id": "7d13ae1a-6248-46e9-bb2a-457f5802812d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{Collection_Base_URL}}Students"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Student Resource",
+					"_postman_id": "95de4f2a-8afc-4868-ae6b-27848730811d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_Name\": \"Vedham\",\r\n    \"last_Name\": \"iyer\",\r\n    \"age\": 34,\r\n    \"id\" : 3,\r\n    \"subjectId\": 2,\r\n     \"skills\": [\r\n        \"Java\",\r\n        \"Python\"\r\n      ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{Collection_Base_URL}}Students"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete students with Student id",
+					"_postman_id": "22b30a63-a25a-4fb5-a186-2829d67260b1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{Collection_Base_URL}}Students/1"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "60eb6de3-28d5-4d5d-9fa6-471ba5298e2a"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ded34819-299d-4c51-8e55-19669631565f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "432443dc-4da8-4278-99a9-cad9eef3657e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "10421bee-257b-4337-98c9-0064461532d9",
+			"key": "Collection_Base_URL",
+			"value": "http://localhost:3000/",
+			"type": "string"
+		}
+	]
+}
