@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "5bc72ec2-0d86-479e-a26e-e630bd5b7026",
-		"name": "MyFirst",
+		"name": "MyAPIs",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -269,7 +269,7 @@
 	],
 	"variable": [
 		{
-			"id": "30f94737-32f2-49e0-9f64-aec198ae9adc",
+			"id": "adadc64f-5d7e-42fe-b05c-78686b34a6d9",
 			"key": "Collection_Base_URL",
 			"value": "http://localhost:3000/",
 			"type": "string"
