@@ -254,8 +254,9 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "PUT",
+						"header": [],
+						"url": "{{Collection_Base_URL}}Students"
 					},
 					"response": []
 				}
@@ -287,7 +288,7 @@
 	],
 	"variable": [
 		{
-			"id": "61601930-9bb2-4061-93b4-62b3ea82b37e",
+			"id": "b40b2875-ff0a-4ba5-936e-03c94564d288",
 			"key": "Collection_Base_URL",
 			"value": "http://localhost:3000/",
 			"type": "string"
