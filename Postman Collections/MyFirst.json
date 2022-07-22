@@ -152,7 +152,45 @@
 		},
 		{
 			"name": "Matches",
-			"item": [],
+			"item": [
+				{
+					"name": "http://localhost:3000/Indo-Pak-Series",
+					"id": "3d98cd58-1848-49c2-9ad1-4bd673f1338d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "{{url}}Indo-Pak-Series"
+					},
+					"response": [
+						{
+							"id": "1e8e5697-b2c9-4f9c-961b-8bae587bf6a5",
+							"name": "Default",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": "{{url}}/http://localhost:3000/Indo-Pak-Series"
+							},
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"editionId\": 2022,\n  \"data\": {\n    \"homeCountry\": \"India\",\n    \"visitingCountry\": \"Pakistan\",\n    \"playerCount\": 11,\n    \"playerMinHeight\": 6.2,\n    \"id\": 1,\n    \"gameId\": 2\n  },\n  \"games\": [\n    {\n      \"date\": \"2022-07-022T13:33:03.969Z\",\n      \"venue\": \"Chennai\",\n      \"id\": 1\n    },\n    {\n      \"date\": \"2022-07-023T13:33:03.969Z\",\n      \"venue\": \"Banglore\",\n      \"id\": 2\n    },\n    {\n      \"date\": \"2022-07-024T13:33:03.969Z\",\n      \"venue\": \"Kolkatta\",\n      \"id\": 3\n    }\n  ],\n  \"teams\": [\n    {\n      \"Name\": \"India\",\n      \"id\": 1,\n      \"playerCount\": 11,\n      \"players\": [\n        {\n          \"playerName\": \"Sachin\",\n          \"id\": 1\n        },\n        {\n          \"playerName\": \"Ganguly\",\n          \"id\": 2\n        },\n        {\n          \"playerName\": \"Shewag\",\n          \"id\": 3\n        },\n        {\n          \"playerName\": \"Dravid\",\n          \"id\": 4\n        },\n        {\n          \"playerName\": \"Yuvraj\",\n          \"id\": 5\n        },\n        {\n          \"playerName\": \"Dhoni\",\n          \"id\": 6\n        },\n        {\n          \"playerName\": \"Pathan\",\n          \"id\": 7\n        },\n        {\n          \"playerName\": \"Harbhajan\",\n          \"id\": 8\n        },\n        {\n          \"playerName\": \"Kumble\",\n          \"id\": 9\n        },\n        {\n          \"playerName\": \"Zaheer\",\n          \"id\": 10\n        },\n        {\n          \"playerName\": \"Nehra\",\n          \"id\": 11\n        }\n      ]\n    },\n    {\n      \"Name\": \"Pakistan\",\n      \"id\": 2,\n      \"playerCount\": 11,\n      \"players\": [\n        {\n          \"playerName\": \"Anwar\",\n          \"id\": 1\n        },\n        {\n          \"playerName\": \"Yousuf\",\n          \"id\": 2\n        },\n        {\n          \"playerName\": \"Younis\",\n          \"id\": 3\n        },\n        {\n          \"playerName\": \"Malik\",\n          \"id\": 4\n        },\n        {\n          \"playerName\": \"Inzamam\",\n          \"id\": 5\n        },\n        {\n          \"playerName\": \"Afridi\",\n          \"id\": 6\n        },\n        {\n          \"playerName\": \"Moin\",\n          \"id\": 7\n        },\n        {\n          \"playerName\": \"Akram\",\n          \"id\": 8\n        },\n        {\n          \"playerName\": \"Akthar\",\n          \"id\": 9\n        },\n        {\n          \"playerName\": \"Saqline\",\n          \"id\": 10\n        },\n        {\n          \"playerName\": \"Waqar\",\n          \"id\": 11\n        }\n      ]\n    }\n  ]\n}"
+						}
+					]
+				}
+			],
 			"id": "f6d8a32b-7b7d-49bd-8261-5bf3f02b276d"
 		},
 		{
@@ -182,7 +220,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"First Name\": \"Vedham\",\r\n    \"Last Name\": \"iyer\",\r\n    \"Age\": 34,\r\n    \"id\" : 3,\r\n    \"SubjectId\": 2\r\n}",
+					"raw": "{\r\n    \"first_Name\": \"Vedham\",\r\n    \"last_Name\": \"iyer\",\r\n    \"age\": 34,\r\n    \"id\" : 3,\r\n    \"subjectId\": 2,\r\n     \"skills\": [\r\n        \"Java\",\r\n        \"Python\"\r\n      ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -205,43 +243,6 @@
 				"url": "{{Collection_Base_URL}}Students/1"
 			},
 			"response": []
-		},
-		{
-			"name": "http://localhost:3000/Indo-Pak-Series",
-			"id": "3d98cd58-1848-49c2-9ad1-4bd673f1338d",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": "{{url}}Indo-Pak-Series"
-			},
-			"response": [
-				{
-					"id": "1e8e5697-b2c9-4f9c-961b-8bae587bf6a5",
-					"name": "Default",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": "{{url}}/http://localhost:3000/Indo-Pak-Series"
-					},
-					"code": 200,
-					"_postman_previewlanguage": null,
-					"header": null,
-					"cookie": [],
-					"responseTime": null,
-					"body": "{\n  \"editionId\": 2022,\n  \"data\": {\n    \"homeCountry\": \"India\",\n    \"visitingCountry\": \"Pakistan\",\n    \"playerCount\": 11,\n    \"playerMinHeight\": 6.2,\n    \"id\": 1,\n    \"gameId\": 2\n  },\n  \"games\": [\n    {\n      \"date\": \"2022-07-022T13:33:03.969Z\",\n      \"venue\": \"Chennai\",\n      \"id\": 1\n    },\n    {\n      \"date\": \"2022-07-023T13:33:03.969Z\",\n      \"venue\": \"Banglore\",\n      \"id\": 2\n    },\n    {\n      \"date\": \"2022-07-024T13:33:03.969Z\",\n      \"venue\": \"Kolkatta\",\n      \"id\": 3\n    }\n  ],\n  \"teams\": [\n    {\n      \"Name\": \"India\",\n      \"id\": 1,\n      \"playerCount\": 11,\n      \"players\": [\n        {\n          \"playerName\": \"Sachin\",\n          \"id\": 1\n        },\n        {\n          \"playerName\": \"Ganguly\",\n          \"id\": 2\n        },\n        {\n          \"playerName\": \"Shewag\",\n          \"id\": 3\n        },\n        {\n          \"playerName\": \"Dravid\",\n          \"id\": 4\n        },\n        {\n          \"playerName\": \"Yuvraj\",\n          \"id\": 5\n        },\n        {\n          \"playerName\": \"Dhoni\",\n          \"id\": 6\n        },\n        {\n          \"playerName\": \"Pathan\",\n          \"id\": 7\n        },\n        {\n          \"playerName\": \"Harbhajan\",\n          \"id\": 8\n        },\n        {\n          \"playerName\": \"Kumble\",\n          \"id\": 9\n        },\n        {\n          \"playerName\": \"Zaheer\",\n          \"id\": 10\n        },\n        {\n          \"playerName\": \"Nehra\",\n          \"id\": 11\n        }\n      ]\n    },\n    {\n      \"Name\": \"Pakistan\",\n      \"id\": 2,\n      \"playerCount\": 11,\n      \"players\": [\n        {\n          \"playerName\": \"Anwar\",\n          \"id\": 1\n        },\n        {\n          \"playerName\": \"Yousuf\",\n          \"id\": 2\n        },\n        {\n          \"playerName\": \"Younis\",\n          \"id\": 3\n        },\n        {\n          \"playerName\": \"Malik\",\n          \"id\": 4\n        },\n        {\n          \"playerName\": \"Inzamam\",\n          \"id\": 5\n        },\n        {\n          \"playerName\": \"Afridi\",\n          \"id\": 6\n        },\n        {\n          \"playerName\": \"Moin\",\n          \"id\": 7\n        },\n        {\n          \"playerName\": \"Akram\",\n          \"id\": 8\n        },\n        {\n          \"playerName\": \"Akthar\",\n          \"id\": 9\n        },\n        {\n          \"playerName\": \"Saqline\",\n          \"id\": 10\n        },\n        {\n          \"playerName\": \"Waqar\",\n          \"id\": 11\n        }\n      ]\n    }\n  ]\n}"
-				}
-			]
 		}
 	],
 	"event": [
@@ -268,7 +269,7 @@
 	],
 	"variable": [
 		{
-			"id": "bfaa387c-b646-43dd-8149-49541996e2f9",
+			"id": "c506a512-88ca-4993-bf7d-bcd34be728f0",
 			"key": "Collection_Base_URL",
 			"value": "http://localhost:3000/",
 			"type": "string"
