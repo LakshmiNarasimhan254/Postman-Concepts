@@ -194,7 +194,7 @@
 			"id": "f6d8a32b-7b7d-49bd-8261-5bf3f02b276d"
 		},
 		{
-			"name": "New Folder",
+			"name": "Student_Management_System",
 			"item": [],
 			"id": "60eb6de3-28d5-4d5d-9fa6-471ba5298e2a"
 		},
@@ -274,7 +274,7 @@
 	],
 	"variable": [
 		{
-			"id": "fdf8b3c3-a468-4292-9a53-bb7db1bd3f83",
+			"id": "f0d3deac-14f5-4b4f-b087-209ed054f2fd",
 			"key": "Collection_Base_URL",
 			"value": "http://localhost:3000/",
 			"type": "string"
