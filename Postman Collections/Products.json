@@ -235,9 +235,9 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
+				"method": "DELETE",
 				"header": [],
-				"url": "{{BaseUrl}}products/category/smartphones"
+				"url": "{{BaseUrl}}products/1"
 			},
 			"response": []
 		}
