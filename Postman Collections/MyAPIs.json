@@ -261,7 +261,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Update Student Partially",
 					"id": "1542bb1e-35d4-49cb-bd54-454a925d1990",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -300,7 +300,7 @@
 	],
 	"variable": [
 		{
-			"id": "7bd214f5-3cb0-4591-80b8-45b648369007",
+			"id": "3d53ca5f-1028-421f-842a-67d401d03e86",
 			"key": "Collection_Base_URL",
 			"value": "http://localhost:3000/",
 			"type": "string"
